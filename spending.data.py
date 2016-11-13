@@ -59,6 +59,7 @@ def getAccount( accNum ):
     return data1;
 
 aNum = "58283089360f81f10454bd2f";
+textParameter = 1000;
 tBalance = getAccount(aNum);
 zero = tBalance['balance'];
 withdraw(zero);
@@ -67,8 +68,10 @@ deposit(inBal);
 list = [50, 400, 1200];
 
 for i in range(0,3):
-    amount = list[i];
-    withdraw(amount);
+	amount = list[i];
+	withdraw(amount);
+	if(list[i] > 1000):
+		
 
 fAData = getAccount(aNum);
 fBal = fAData['balance'];
