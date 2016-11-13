@@ -36,10 +36,14 @@ list = [50, 400, 1200];
 for i in range(0,3):
     amount = list[i];
     Bal = withdraw(Bal, amount);
+    print("balance after",amount,"dollar withdraw:",Bal)
 	if(amount > textParameter):
 		
+
 if(Bal < 1):
-    Bal = 0;
-cData = creAccount(customerId, Bal);
-fBal = cData['objectCreated']['balance'];
-print(fBal);
+    Bal = -Bal;
+    print("In debt",Bal,"dollars")
+else:
+    cData = creAccount(customerId, Bal);
+    fBal = cData['objectCreated']['balance'];
+    print("final balance:", fBal);
