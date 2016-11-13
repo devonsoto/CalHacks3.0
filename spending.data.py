@@ -44,8 +44,10 @@ for i in range(0,3):
     Bal = withdraw(Bal, amount);
     print("balance after",amount,"dollar withdraw:",Bal)
     if(amount > textParameter):
-        print("message sent")
+        print("Spending amount too high! message sent")
         message = client.messages.create(to="+17204800272", from_="+17205731824", body="Thank you CapitalOne and Twilio!")
+    else:
+        print("Spending amount is fine. no message sent")
 
 
 
@@ -55,4 +57,4 @@ if(Bal < 1):
 else:
     cData = creAccount(customerId, Bal);
     fBal = cData['objectCreated']['balance'];
-    print("final balance:", fBal);
+    print("Final balance:", fBal);
