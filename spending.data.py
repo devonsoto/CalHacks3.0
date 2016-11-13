@@ -1,6 +1,12 @@
+from twilio.rest import TwilioRestClient
 import requests
 import json
 from pprint import pprint
+
+
+account_sid = "ACf5a26da9bb7bb91160601fc32921b0d7"
+auth_token = "2899c0df8f7c7864083cfd74320b0bdc"
+client = TwilioRestClient(account_sid, auth_token)
 
 def withdraw( amount, debt ):
     amount = amount - debt;
@@ -37,8 +43,11 @@ for i in range(0,3):
     amount = list[i];
     Bal = withdraw(Bal, amount);
     print("balance after",amount,"dollar withdraw:",Bal)
-	if(amount > textParameter):
-		
+    if(amount > textParameter):
+        print("message sent")
+        message = client.messages.create(to="+17204800272", from_="+17205731824", body="Hello there!")
+
+
 
 if(Bal < 1):
     Bal = -Bal;
