@@ -45,7 +45,7 @@ for i in range(0,3):
     print("balance after",amount,"dollar withdraw:",Bal)
     if(amount > textParameter):
         print("message sent")
-        message = client.messages.create(to="+17204800272", from_="+17205731824", body="Hello there!")
+        message = client.messages.create(to="+17204800272", from_="+17205731824", body="Thank CaptialOne & Twilio!")
 
 
 
