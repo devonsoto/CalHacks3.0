@@ -28,7 +28,7 @@ def creAccount( cusNum, bal ):
     return data1;
 
 customerId = "58282f94360f81f10454bd2a"
-Bal = int(input());
+Bal = int(input("Enter an initial balance: "));
 aNum = "58283089360f81f10454bd2f";
 textParameter = 1000;
 list = [50, 400, 1200];
@@ -38,7 +38,8 @@ for i in range(0,3):
     Bal = withdraw(Bal, amount);
 	if(amount > textParameter):
 		
-
+if(Bal < 1):
+    Bal = 0;
 cData = creAccount(customerId, Bal);
 fBal = cData['objectCreated']['balance'];
 print(fBal);
